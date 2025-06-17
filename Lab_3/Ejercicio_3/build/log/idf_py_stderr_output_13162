@@ -1,0 +1,20 @@
+Command: make -j 10 flash
+/home/nacho/esp/projects_tf/person_detection/main/app_camera_esp.c: In function 'app_camera_init':
+/home/nacho/esp/projects_tf/person_detection/main/app_camera_esp.c:62:3: warning: 'pin_sscb_sda' is deprecated: please use pin_sccb_sda instead [-Wdeprecated-declarations]
+   62 |   config.pin_sscb_sda = CAMERA_PIN_SIOD;
+      |   ^~~~~~
+In file included from /home/nacho/esp/projects_tf/person_detection/main/app_camera_esp.h:20,
+                 from /home/nacho/esp/projects_tf/person_detection/main/app_camera_esp.c:16:
+/home/nacho/esp/projects_tf/person_detection/managed_components/espressif__esp32-camera/driver/include/esp_camera.h:123:13: note: declared here
+  123 |         int pin_sscb_sda __attribute__((deprecated("please use pin_sccb_sda instead")));           /*!< GPIO pin for camera SDA line (legacy name) */
+      |             ^~~~~~~~~~~~
+/home/nacho/esp/projects_tf/person_detection/main/app_camera_esp.c:63:3: warning: 'pin_sscb_scl' is deprecated: please use pin_sccb_scl instead [-Wdeprecated-declarations]
+   63 |   config.pin_sscb_scl = CAMERA_PIN_SIOC;
+      |   ^~~~~~
+/home/nacho/esp/projects_tf/person_detection/managed_components/espressif__esp32-camera/driver/include/esp_camera.h:127:13: note: declared here
+  127 |         int pin_sscb_scl __attribute__((deprecated("please use pin_sccb_scl instead")));           /*!< GPIO pin for camera SCL line (legacy name) */
+      |             ^~~~~~~~~~~~
+In file included from /home/nacho/esp/projects_tf/person_detection/main/image_provider.cc:23:
+/home/nacho/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:6:2: warning: #warning esp_spi_flash.h is deprecated, please use spi_flash_mmap.h instead [-Wcpp]
+    6 | #warning esp_spi_flash.h is deprecated, please use spi_flash_mmap.h instead
+      |  ^~~~~~~

@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nacho/esp/projects_tf/person_detection/build/image0.S
+
+/home/nacho/esp/projects_tf/person_detection/build/image1.S
+
+/home/nacho/esp/projects_tf/person_detection/build/image2.S
+
+/home/nacho/esp/projects_tf/person_detection/build/image3.S
+
+/home/nacho/esp/projects_tf/person_detection/build/image4.S
+
+/home/nacho/esp/projects_tf/person_detection/build/image5.S
+
+/home/nacho/esp/projects_tf/person_detection/build/image6.S
+
+/home/nacho/esp/projects_tf/person_detection/build/image7.S
+
+/home/nacho/esp/projects_tf/person_detection/build/image8.S
+
+/home/nacho/esp/projects_tf/person_detection/build/image9.S
+

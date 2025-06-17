@@ -1,0 +1,6 @@
+Command: make -j 10 flash
+make[3]: *** No rule to make target '/home/nacho/esp/projects_tf/person_detection/static_images/sample_images/image9', needed by 'image9.S'.  Stop.
+make[2]: *** [CMakeFiles/Makefile2:5819: esp-idf/static_images/CMakeFiles/__idf_static_images.dir/all] Error 2
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/Makefile2:2556: CMakeFiles/flash.dir/rule] Error 2
+make: *** [Makefile:286: flash] Error 2

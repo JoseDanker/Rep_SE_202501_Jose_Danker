@@ -1,0 +1,9 @@
+Command: make -j 10 all
+/home/nacho/esp/projects_tf/person_detection/main/main_functions.cc: In function 'void setup()':
+/home/nacho/esp/projects_tf/person_detection/main/main_functions.cc:117:3: error: 'gpio_pad_select_gpio' was not declared in this scope; did you mean 'esp_rom_gpio_pad_select_gpio'?
+  117 |   gpio_pad_select_gpio(LED_GPIO);
+      |   ^~~~~~~~~~~~~~~~~~~~
+      |   esp_rom_gpio_pad_select_gpio
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:118: esp-idf/main/CMakeFiles/__idf_main.dir/main_functions.cc.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:5930: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2

@@ -1,0 +1,2 @@
+source /home/nacho/esp/projects_tf/person_detection/build/gdbinit/symbols
+source /home/nacho/esp/projects_tf/person_detection/build/gdbinit/connect

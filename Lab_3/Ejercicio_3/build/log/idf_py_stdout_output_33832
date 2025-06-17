@@ -1,0 +1,183 @@
+Command: /home/nacho/esp/idf-tools/python_env/idf5.5_py3.12_env/bin/python /home/nacho/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/nacho/esp/projects_tf/person_detection/build/person_detection.elf /home/nacho/esp/projects_tf/person_detection/build/bootloader/bootloader.elf -m '/home/nacho/esp/idf-tools/python_env/idf5.5_py3.12_env/bin/python' '/home/nacho/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyUSB0'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:6688
+load:0x40078000,len:16788
+ho 0 tail 12 room 4
+load:0x40080400,len:4288
+entry 0x40080658
+[0;32mI (29) boot: ESP-IDF v5.5-dev-2715-ga45d713b03-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jun  5 2025 09:04:43[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (36) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : QIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (55) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (77) boot:  2 factory          factory app      00 00 00010000 00180000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=5c244h (377412) map[0m
+[0;32mI (191) esp_image: segment 1: paddr=0006c26c vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (191) esp_image: segment 2: paddr=0006c290 vaddr=3ffb0000 size=03424h ( 13348) load[0m
+[0;32mI (199) esp_image: segment 3: paddr=0006f6bc vaddr=40080000 size=0095ch (  2396) load[0m
+[0;32mI (203) esp_image: segment 4: paddr=00070020 vaddr=400d0020 size=315d0h (202192) map[0m
+[0;32mI (261) esp_image: segment 5: paddr=000a15f8 vaddr=4008095c size=0efa4h ( 61348) load[0m
+[0;32mI (288) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (288) boot: Disabling RNG early entropy source...[0m
+[0;32mI (298) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (298) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (298) esp_psram: Speed: 80MHz[0m
+[0;32mI (298) esp_psram: PSRAM initialized, cache is in low/high (2-core) mode.[0m
+[0;33mW (306) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (314) cpu_start: Multicore app[0m
+[0;32mI (784) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (791) cpu_start: Pro cpu start user code[0m
+[0;32mI (791) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (792) app_init: Application information:[0m
+[0;32mI (792) app_init: Project name:     person_detection[0m
+[0;32mI (796) app_init: App version:      1[0m
+[0;32mI (800) app_init: Compile time:     Jun 16 2025 20:23:24[0m
+[0;32mI (805) app_init: ELF file SHA256:  619969588...[0m
+[0;32mI (809) app_init: ESP-IDF:          v5.5-dev-2715-ga45d713b03-dirty[0m
+[0;32mI (815) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (819) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (823) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (827) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (833) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (838) heap_init: At 3FFB4978 len 0002B688 (173 KiB): DRAM[0m
+[0;32mI (843) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (849) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (854) heap_init: At 4008F900 len 00010700 (65 KiB): IRAM[0m
+[0;32mI (860) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (866) spi_flash: detected chip: generic[0m
+[0;32mI (870) spi_flash: flash io: qio[0m
+[0;32mI (873) main_task: Started on CPU0[0m
+[0;32mI (883) main_task: Calling app_main()[0m
+[0;32mI (903) cam_hal: cam init ok[0m
+[0;32mI (903) sccb-ng: pin_sda 18 pin_scl 23[0m
+[0;32mI (903) sccb-ng: sccb_i2c_port=1[0m
+[1;31mE (913) camera: Camera probe failed with error 0x105(ESP_ERR_NOT_FOUND)[0m
+[1;31mE (913) app_camera: Camera init failed with error 0x105[0m
+Camera init failed
+
+InitCamera failed
+
+[1;31mE (913) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:11%, no person score 89%
+[1;31mE (1393) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:18%, no person score 82%
+[1;31mE (1863) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:87%, no person score 13%
+[1;31mE (2333) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:89%, no person score 11%
+[1;31mE (2803) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:91%, no person score 9%
+[1;31mE (3273) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:90%, no person score 10%
+[1;31mE (3743) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:92%, no person score 8%
+[1;31mE (4213) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:91%, no person score 9%
+[1;31mE (4683) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:91%, no person score 9%
+[1;31mE (5153) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:92%, no person score 8%
+[1;31mE (5623) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:91%, no person score 9%
+[1;31mE (6093) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:92%, no person score 8%
+[1;31mE (6563) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:92%, no person score 8%
+[1;31mE (7033) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:93%, no person score 7%
+[1;31mE (7503) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:91%, no person score 9%
+[1;31mE (7973) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:92%, no person score 8%
+[1;31mE (8443) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:91%, no person score 9%
+[1;31mE (8913) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:92%, no person score 8%
+[1;31mE (9383) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:91%, no person score 9%
+[1;31mE (9853) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:92%, no person score 8%
+[1;31mE (10323) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:92%, no person score 8%
+[1;31mE (10793) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:91%, no person score 9%
+[1;31mE (11263) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:92%, no person score 8%
+[1;31mE (11733) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:91%, no person score 9%
+[1;31mE (12203) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:92%, no person score 8%
+[1;31mE (12673) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:91%, no person score 9%
+[1;31mE (13143) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:91%, no person score 9%
+[1;31mE (13613) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:91%, no person score 9%
+[1;31mE (14083) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:90%, no person score 10%
+[1;31mE (14553) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:91%, no person score 9%
+[1;31mE (15023) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:91%, no person score 9%
+[1;31mE (15493) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:92%, no person score 8%
+[1;31mE (15963) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:91%, no person score 9%
+[1;31mE (16433) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:92%, no person score 8%
+[1;31mE (16903) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:91%, no person score 9%
+[1;31mE (17373) app_camera: Camera capture failed[0m
+Image capture failed.
+person score:92%, no person score 8%
+[1;31mE (17843) app_camera: Camera capture failed[0m
+Image capture failed.

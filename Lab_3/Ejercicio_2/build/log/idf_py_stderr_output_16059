@@ -1,0 +1,30 @@
+Command: make -j 10 all
+/home/nacho/esp/projects_tf/person_detection/main/main_functions.cc: In function 'void setup()':
+/home/nacho/esp/projects_tf/person_detection/main/main_functions.cc:117:22: error: 'GPIO_NUM_33' was not declared in this scope
+  117 | gpio_pad_select_gpio(GPIO_NUM_33);
+      |                      ^~~~~~~~~~~
+/home/nacho/esp/projects_tf/person_detection/main/main_functions.cc:117:1: error: 'gpio_pad_select_gpio' was not declared in this scope
+  117 | gpio_pad_select_gpio(GPIO_NUM_33);
+      | ^~~~~~~~~~~~~~~~~~~~
+/home/nacho/esp/projects_tf/person_detection/main/main_functions.cc:118:33: error: 'GPIO_MODE_OUTPUT' was not declared in this scope
+  118 | gpio_set_direction(GPIO_NUM_33, GPIO_MODE_OUTPUT);
+      |                                 ^~~~~~~~~~~~~~~~
+/home/nacho/esp/projects_tf/person_detection/main/main_functions.cc:118:1: error: 'gpio_set_direction' was not declared in this scope
+  118 | gpio_set_direction(GPIO_NUM_33, GPIO_MODE_OUTPUT);
+      | ^~~~~~~~~~~~~~~~~~
+/home/nacho/esp/projects_tf/person_detection/main/main_functions.cc: In function 'void loop()':
+/home/nacho/esp/projects_tf/person_detection/main/main_functions.cc:147:20: error: 'GPIO_NUM_33' was not declared in this scope
+  147 |     gpio_set_level(GPIO_NUM_33, 1); // prender LED
+      |                    ^~~~~~~~~~~
+/home/nacho/esp/projects_tf/person_detection/main/main_functions.cc:147:5: error: 'gpio_set_level' was not declared in this scope
+  147 |     gpio_set_level(GPIO_NUM_33, 1); // prender LED
+      |     ^~~~~~~~~~~~~~
+/home/nacho/esp/projects_tf/person_detection/main/main_functions.cc:149:22: error: 'GPIO_NUM_33' was not declared in this scope
+  149 |       gpio_set_level(GPIO_NUM_33, 0); // apagar LED
+      |                      ^~~~~~~~~~~
+/home/nacho/esp/projects_tf/person_detection/main/main_functions.cc:149:7: error: 'gpio_set_level' was not declared in this scope
+  149 |       gpio_set_level(GPIO_NUM_33, 0); // apagar LED
+      |       ^~~~~~~~~~~~~~
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:118: esp-idf/main/CMakeFiles/__idf_main.dir/main_functions.cc.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:5930: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2
