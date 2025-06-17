@@ -1,0 +1,401 @@
+Command: /home/rodo1/esp/idf-tools/python_env/idf5.5_py3.12_env/bin/python /home/rodo1/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/rodo1/esp/projects_tf/person_detection/build/person_detection.elf /home/rodo1/esp/projects_tf/person_detection/build/bootloader/bootloader.elf -m '/home/rodo1/esp/idf-tools/python_env/idf5.5_py3.12_env/bin/python' '/home/rodo1/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyUSB0'
+ets Jun  8 2016 00�ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:6696
+load:0x40078000,len:16788
+load:0x40080400,len:4288
+entry 0x40080658
+[0;32mI (27) boot: ESP-IDF v5.5-dev-2488-gee77c489e7-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jun 16 2025 23:21:47[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v1.1[0m
+[0;32mI (33) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (37) boot.esp32: SPI Speed      : 80MHz[0m
+[0;32mI (41) boot.esp32: SPI Mode       : QIO[0m
+[0;32mI (45) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (55) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (62) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (68) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (75) boot:  2 factory          factory app      00 00 00010000 00180000[0m
+[0;32mI (81) boot: End of partition table[0m
+[0;32mI (85) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=13048h ( 77896) map[0m
+[0;32mI (112) esp_image: segment 1: paddr=00023070 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (112) esp_image: segment 2: paddr=00023094 vaddr=3ffb0000 size=057f4h ( 22516) load[0m
+[0;32mI (122) esp_image: segment 3: paddr=00028890 vaddr=40080000 size=07788h ( 30600) load[0m
+[0;32mI (133) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=33c18h (211992) map[0m
+[0;32mI (187) esp_image: segment 5: paddr=00063c40 vaddr=40087788 size=08158h ( 33112) load[0m
+[0;32mI (206) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (206) boot: Disabling RNG early entropy source...[0m
+[0;32mI (216) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (216) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (216) esp_psram: Speed: 80MHz[0m
+[0;32mI (216) esp_psram: PSRAM initialized, cache is in low/high (2-core) mode.[0m
+[0;33mW (223) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (232) cpu_start: Multicore app[0m
+[0;32mI (698) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (706) cpu_start: Pro cpu start user code[0m
+[0;32mI (706) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (706) app_init: Application information:[0m
+[0;32mI (706) app_init: Project name:     person_detection[0m
+[0;32mI (711) app_init: App version:      1[0m
+[0;32mI (714) app_init: Compile time:     Jun 16 2025 23:21:26[0m
+[0;32mI (719) app_init: ELF file SHA256:  d5a1785ba...[0m
+[0;32mI (723) app_init: ESP-IDF:          v5.5-dev-2488-gee77c489e7-dirty[0m
+[0;32mI (729) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (733) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (737) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (741) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (747) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (752) heap_init: At 3FFB6DE0 len 00029220 (164 KiB): DRAM[0m
+[0;32mI (758) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (763) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (768) heap_init: At 4008F8E0 len 00010720 (65 KiB): IRAM[0m
+[0;32mI (774) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (781) spi_flash: detected chip: generic[0m
+[0;32mI (784) spi_flash: flash io: qio[0m
+[0;32mI (787) main_task: Started on CPU0[0m
+[0;32mI (797) main_task: Calling app_main()[0m
+[0;32mI (797) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (797) cam_hal: cam init ok[0m
+[0;32mI (797) sccb-ng: pin_sda 26 pin_scl 27[0m
+[0;32mI (807) sccb-ng: sccb_i2c_port=1[0m
+[0;32mI (807) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (847) camera: Detected camera at address=0x30[0m
+[0;32mI (847) camera: Detected OV2640 camera[0m
+[0;32mI (847) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (917) esp32 ll_cam: node_size: 3072, nodes_per_line: 1, lines_per_node: 4, dma_half_buffer_min:  3072, dma_half_buffer: 12288,lines_per_half_buffer: 16, dma_buffer_size: 24576, image_size: 18432[0m
+[0;32mI (927) cam_hal: buffer_size: 24576, half_buffer_size: 12288, node_buffer_size: 3072, node_cnt: 8, total_cnt: 1[0m
+[0;32mI (937) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (937) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (947) cam_hal: cam config ok[0m
+[0;32mI (947) ov2640: Set PLL: clk_2x: 0, clk_div: 3, pclk_auto: 1, pclk_div: 8[0m
+Camera Initialized
+
+Image Captured
+
+Nada detectado (confianza baja)
+Clase 0 → -105
+Clase 1 → -105
+Clase 2 → -105
+Clase 3 → -105
+Clase 4 → -105
+Clase 5 → -105
+Clase 6 → -105
+Clase 7 → -105
+Clase 8 → -105
+Clase 9 → -105
+Clase 10 → -105
+Image Captured
+
+Nada detectado (confianza baja)
+Clase 0 → -105
+Clase 1 → -105
+Clase 2 → -105
+Clase 3 → -105
+Clase 4 → -105
+Clase 5 → -105
+Clase 6 → -105
+Clase 7 → -105
+Clase 8 → -105
+Clase 9 → -105
+Clase 10 → -105
+Image Captured
+
+Nada detectado (confianza baja)
+Clase 0 → -105
+Clase 1 → -105
+Clase 2 → -105
+Clase 3 → -105
+Clase 4 → -105
+Clase 5 → -105
+Clase 6 → -105
+Clase 7 → -105
+Clase 8 → -105
+Clase 9 → -105
+Clase 10 → -105
+Image Captured
+
+Nada detectado (confianza baja)
+Clase 0 → -105
+Clase 1 → -105
+Clase 2 → -105
+Clase 3 → -105
+Clase 4 → -105
+Clase 5 → -105
+Clase 6 → -105
+Clase 7 → -105
+Clase 8 → -105
+Clase 9 → -105
+Clase 10 → -105
+Image Captured
+
+Nada detectado (confianza baja)
+Clase 0 → -105
+Clase 1 → -105
+Clase 2 → -105
+Clase 3 → -105
+Clase 4 → -105
+Clase 5 → -105
+Clase 6 → -105
+Clase 7 → -105
+Clase 8 → -105
+Clase 9 → -105
+Clase 10 → -105
+Image Captured
+
+Nada detectado (confianza baja)
+Clase 0 → -105
+Clase 1 → -105
+Clase 2 → -105
+Clase 3 → -105
+Clase 4 → -105
+Clase 5 → -105
+Clase 6 → -105
+Clase 7 → -105
+Clase 8 → -105
+Clase 9 → -105
+Clase 10 → -105
+Image Captured
+
+Nada detectado (confianza baja)
+Clase 0 → -105
+Clase 1 → -105
+Clase 2 → -105
+Clase 3 → -105
+Clase 4 → -105
+Clase 5 → -105
+Clase 6 → -105
+Clase 7 → -105
+Clase 8 → -105
+Clase 9 → -105
+Clase 10 → -105
+Image Captured
+
+Nada detectado (confianza baja)
+Clase 0 → -105
+Clase 1 → -105
+Clase 2 → -105
+Clase 3 → -105
+Clase 4 → -105
+Clase 5 → -105
+Clase 6 → -105
+Clase 7 → -105
+Clase 8 → -105
+Clase 9 → -105
+Clase 10 → -105
+Image Captured
+
+Nada detectado (confianza baja)
+Clase 0 → -105
+Clase 1 → -105
+Clase 2 → -105
+Clase 3 → -105
+Clase 4 → -105
+Clase 5 → -105
+Clase 6 → -105
+Clase 7 → -105
+Clase 8 → -105
+Clase 9 → -105
+Clase 10 → -105
+Image Captured
+
+Nada detectado (confianza baja)
+Clase 0 → -105
+Clase 1 → -105
+Clase 2 → -105
+Clase 3 → -105
+Clase 4 → -105
+Clase 5 → -105
+Clase 6 → -105
+Clase 7 → -105
+Clase 8 → -105
+Clase 9 → -105
+Clase 10 → -105
+Image Captured
+
+Nada detectado (confianza baja)
+Clase 0 → -105
+Clase 1 → -105
+Clase 2 → -105
+Clase 3 → -105
+Clase 4 → -105
+Clase 5 → -105
+Clase 6 → -105
+Clase 7 → -105
+Clase 8 → -105
+Clase 9 → -105
+Clase 10 → -105
+Image Captured
+
+Nada detectado (confianza baja)
+Clase 0 → -105
+Clase 1 → -105
+Clase 2 → -105
+Clase 3 → -105
+Clase 4 → -105
+Clase 5 → -105
+Clase 6 → -105
+Clase 7 → -105
+Clase 8 → -105
+Clase 9 → -105
+Clase 10 → -105
+Image Captured
+
+Nada detectado (confianza baja)
+Clase 0 → -105
+Clase 1 → -105
+Clase 2 → -105
+Clase 3 → -105
+Clase 4 → -105
+Clase 5 → -105
+Clase 6 → -105
+Clase 7 → -105
+Clase 8 → -105
+Clase 9 → -105
+Clase 10 → -105
+Image Captured
+
+Nada detectado (confianza baja)
+Clase 0 → -105
+Clase 1 → -105
+Clase 2 → -105
+Clase 3 → -105
+Clase 4 → -105
+Clase 5 → -105
+Clase 6 → -105
+Clase 7 → -105
+Clase 8 → -105
+Clase 9 → -105
+Clase 10 → -105
+Image Captured
+
+Nada detectado (confianza baja)
+Clase 0 → -105
+Clase 1 → -105
+Clase 2 → -105
+Clase 3 → -105
+Clase 4 → -105
+Clase 5 → -105
+Clase 6 → -105
+Clase 7 → -105
+Clase 8 → -105
+Clase 9 → -105
+Clase 10 → -105
+Image Captured
+
+Nada detectado (confianza baja)
+Clase 0 → -105
+Clase 1 → -105
+Clase 2 → -105
+Clase 3 → -105
+Clase 4 → -105
+Clase 5 → -105
+Clase 6 → -105
+Clase 7 → -105
+Clase 8 → -105
+Clase 9 → -105
+Clase 10 → -105
+Image Captured
+
+Nada detectado (confianza baja)
+Clase 0 → -105
+Clase 1 → -105
+Clase 2 → -105
+Clase 3 → -105
+Clase 4 → -105
+Clase 5 → -105
+Clase 6 → -105
+Clase 7 → -105
+Clase 8 → -105
+Clase 9 → -105
+Clase 10 → -105
+Image Captured
+
+Nada detectado (confianza baja)
+Clase 0 → -105
+Clase 1 → -105
+Clase 2 → -105
+Clase 3 → -105
+Clase 4 → -105
+Clase 5 → -105
+Clase 6 → -105
+Clase 7 → -105
+Clase 8 → -105
+Clase 9 → -105
+Clase 10 → -105
+Image Captured
+
+Nada detectado (confianza baja)
+Clase 0 → -105
+Clase 1 → -105
+Clase 2 → -105
+Clase 3 → -105
+Clase 4 → -105
+Clase 5 → -105
+Clase 6 → -105
+Clase 7 → -105
+Clase 8 → -105
+Clase 9 → -105
+Clase 10 → -105
+Image Captured
+
+Nada detectado (confianza baja)
+Clase 0 → -105
+Clase 1 → -105
+Clase 2 → -105
+Clase 3 → -105
+Clase 4 → -105
+Clase 5 → -105
+Clase 6 → -105
+Clase 7 → -105
+Clase 8 → -105
+Clase 9 → -105
+Clase 10 → -105
+Image Captured
+
+Nada detectado (confianza baja)
+Clase 0 → -105
+Clase 1 → -105
+Clase 2 → -105
+Clase 3 → -105
+Clase 4 → -105
+Clase 5 → -105
+Clase 6 → -105
+Clase 7 → -105
+Clase 8 → -105
+Clase 9 → -105
+Clase 10 → -105
+Image Captured
+
+Nada detectado (confianza baja)
+Clase 0 → -105
+Clase 1 → -105
+Clase 2 → -105
+Clase 3 → -105
+Clase 4 → -105
+Clase 5 → -105
+Clase 6 → -105
+Clase 7 → -105
+Clase 8 → -105
+Clase 9 → -105
+Clase 10 → -105
+Image Captured
+
+Nada detectado (confianza baja)
+Clase 0 → -105
+Clase 1 → -105
+Clase 2 → -105
+Clase 3 → -105
+Clase 4 → -105
+Clase 5 → -105
+Clase 6 → -105
+Clase 7 → -105
+Clase 8 → -105
+Clase 9 → -105
+Clase 10 → -105

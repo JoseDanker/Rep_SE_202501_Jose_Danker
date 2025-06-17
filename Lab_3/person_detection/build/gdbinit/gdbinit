@@ -1,0 +1,2 @@
+source /home/rodo1/esp/projects_tf/person_detection/build/gdbinit/symbols
+source /home/rodo1/esp/projects_tf/person_detection/build/gdbinit/connect
